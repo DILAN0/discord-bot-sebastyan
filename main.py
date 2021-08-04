@@ -31,7 +31,7 @@ def data():
                 "lvl"	INT
             )""")
     conn.commit()
-data()
+#data()
 #^
 #|
 #|
