@@ -15,9 +15,9 @@ __________________________________
 __________________________________
 Create TOKEN.py file and fill in as written below
 ```
-    vk = "TEXT" vk api
-    ds = "TEXT" discord api
-    faceit_api = "TEXT" faceit api
+vk = "TEXT" vk api
+ds = "TEXT" discord api
+faceit_api = "TEXT" faceit api
 ```
 ### Commands for playing music <a name="music"></a>
 __________________________________
