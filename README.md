@@ -52,3 +52,24 @@ pip install youtube_dl
 pip install youtube-search
 pip install requests
 ```
+Code modification(for the first launch)
+```python
+# функция для создания бд
+def data():
+
+    cursor.execute("""CREATE TABLE "users" (
+                "id"	INT,
+                "nickname"	TEXT,
+                "mention"	TEXT,
+                "account"	TEXT,
+                "steam"  TEXT,
+                "vk"  TEXT,
+                "lvl"	INT
+            )""")
+    conn.commit()
+#data()
+#^
+#|
+#|
+#Убрать комментарий в случаи отсутствия БД
+```
