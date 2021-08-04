@@ -2,7 +2,7 @@
 Discord bot for moderation, listening to music from youtube, linking accounts (FACEIT, Steam, VK)
 1. [Commands for playing music](#example)
 2. [Commands for moderation](#example2)
-3. [Commands for modifying account data](#third-example)
+3. [Commands for modifying account data](#Commands for modifying account data)
 
 
 
