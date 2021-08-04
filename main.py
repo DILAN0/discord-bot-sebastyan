@@ -19,7 +19,7 @@ conn = sqlite3.connect("Discord.sql")
 cursor = conn.cursor()
 print(f"SQlite v {sqlite3.sqlite_version}")
 
-# функция для боздания бд
+# функция для cоздания бд
 def data():
 
     cursor.execute("""CREATE TABLE "users" (
