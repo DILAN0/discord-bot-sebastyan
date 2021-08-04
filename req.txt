@@ -6,5 +6,5 @@ PyNaCl == 1.4.0
 requests == 2.25.1
 youtube-dl == 2021.4.1
 youtube-search == 2.1.0
-sqlite3 == 3.21.0
+sqlite3
 
