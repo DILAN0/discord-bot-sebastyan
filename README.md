@@ -1,4 +1,4 @@
-# sebastyan
+# Sebastyan
 Discord bot for moderation, listening to music from youtube, linking accounts (FACEIT, Steam, VK)
 
 
