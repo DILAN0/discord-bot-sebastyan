@@ -14,10 +14,11 @@ from discord_components import Button,DiscordComponents,ButtonStyle
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='.' , intents = intents)
-conn = sqlite3.connect("Discord.sql") # или :memory:
+conn = sqlite3.connect("Discord.sql")
 cursor = conn.cursor()
 print(f"SQlite v {sqlite3.sqlite_version}")
 
+# функция для боздания бд
 def data():
 
     cursor.execute("""CREATE TABLE "users" (
@@ -30,7 +31,11 @@ def data():
                 "lvl"	INT
             )""")
     conn.commit()
-
+#data()
+#^
+#|
+#|
+#Убрать комментарий в случаи отсутствия бд
 
 @bot.event
 async def on_command_error(ctx, error):
