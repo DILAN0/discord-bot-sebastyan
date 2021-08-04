@@ -25,6 +25,7 @@ pip install discord.py
 pip install discord-components
 pip install youtube_dl
 pip install youtube-search
+pip install requests
 ```
 ### Commands for playing music <a name="music"></a>
 __________________________________
