@@ -1,8 +1,8 @@
 # Sebastyan
 Discord bot for moderation, listening to music from youtube, linking accounts (FACEIT, Steam, VK)
-1. [Commands for playing music](#music)
-2. [Commands for moderation](#mod)
-3. [Commands for modifying account data](#data)
+1.[Commands for playing music](#music)
+2.[Commands for moderation](#mod)
+3.[Commands for modifying account data](#data)
 
 ### Image
 __________________________________
