@@ -11,4 +11,7 @@ IMAGE:
 | Command | Argument | Operation |
 |----------------|:---------:|----------------:|
 | .play | name,url | Play music (name or url) |
-| текст | текст | текст |
+| .oldplay | name,url | Playing music (longer than ".play") |
+| .stop | --- | Stops the music |
+| .pause | --- | Pause music |
+| .resume | --- | Keeps playing music |
