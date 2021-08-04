@@ -52,7 +52,7 @@ pip install youtube_dl
 pip install youtube-search
 pip install requests
 ```
-Code modification(for the first launch)
+Code modification (for the first launch)
 ```python
 def data():
 
