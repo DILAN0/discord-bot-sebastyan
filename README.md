@@ -19,6 +19,13 @@ vk = "TEXT" #vk api
 ds = "TEXT" #discord api
 faceit_api = "TEXT" #faceit api
 ```
+Modules
+```
+pip install discord.py
+pip install discord-components
+pip install youtube_dl
+pip install youtube-search
+```
 ### Commands for playing music <a name="music"></a>
 __________________________________
 | Command | Argument | Operation |
