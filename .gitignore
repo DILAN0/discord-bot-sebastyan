@@ -1,0 +1,10 @@
+# Project exclude paths
+TOKEN.py
+Discord.sql
+main.exe
+main.spec
+song.mp3
+lvl.rar
+/build
+/dist
+faceit_data.py
