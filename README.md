@@ -3,6 +3,7 @@ Discord bot for moderation, listening to music from youtube, linking accounts (F
 1. [Commands for playing music](#music)
 2. [Commands for moderation](#mod)
 3. [Commands for modifying account data](#data)
+4. [Instructions for complete work](#instal)
 
 ### Image
 __________________________________
@@ -10,6 +11,14 @@ __________________________________
 ![image](https://user-images.githubusercontent.com/70542011/128198969-7df22347-2fec-47c6-bcc7-95d6bde7628f.png)
 ![image](https://user-images.githubusercontent.com/70542011/128199128-179a9c80-6a70-4d85-ac34-78ceb9e5c621.png)
 
+### Instructions for complete work <a name="instal"></a>
+__________________________________
+Create TOKEN.py file and fill in as written below
+```
+    vk = "TEXT" vk api
+    ds = "TEXT" discord api
+    faceit_api = "TEXT" faceit api
+```
 ### Commands for playing music <a name="music"></a>
 __________________________________
 | Command | Argument | Operation |
