@@ -14,7 +14,7 @@ __________________________________
 ### Instructions for complete work <a name="instal"></a>
 __________________________________
 Create TOKEN.py file and fill in as written below
-```
+```python
 vk = "TEXT" vk api
 ds = "TEXT" discord api
 faceit_api = "TEXT" faceit api
