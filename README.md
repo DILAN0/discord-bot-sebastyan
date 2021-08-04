@@ -9,5 +9,6 @@ IMAGE:
 ![image](https://user-images.githubusercontent.com/70542011/128199128-179a9c80-6a70-4d85-ac34-78ceb9e5c621.png)
 
 Command:
+
 .play "name or url"
 
