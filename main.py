@@ -8,18 +8,17 @@ import youtube_dl
 from youtube_search import YoutubeSearch
 from TOKEN import *
 from asyncio import sleep
-import json
 import sqlite3
 from discord_components import Button,DiscordComponents,ButtonStyle
-import ffmpeg
+
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='.' , intents = intents)
 conn = sqlite3.connect("Discord.sql")
 cursor = conn.cursor()
+
 print(f"SQlite v {sqlite3.sqlite_version}")
 
-# функция для cоздания бд
 def data():
 
     cursor.execute("""CREATE TABLE "users" (
@@ -32,11 +31,11 @@ def data():
                 "lvl"	INT
             )""")
     conn.commit()
-#data()
-#^
-#|
-#|
-#Убрать комментарий в случаи отсутствия БД
+#---data()---
+#     ^
+#     |
+#     |
+#Remove comment if there is no database
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -130,8 +129,7 @@ async def oldplay(ctx , *,zapr ):
         await ctx.send('⛔ Дождитесь окончания текущего воспроизведения трека или воспользуйтесь командой ".stop"⛔')
         return
     await ctx.send("🎶 Готовлю все, скоро начну воспроизведение музыки 🎶")
-    print("Кто-то хочет играть музыку, позвольте мне приготовить для них это ...")
-
+    
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -201,7 +199,7 @@ async def leave(ctx):
         await voice.disconnect()
         await ctx.send(f"Линул из {channel}")
     else:
-        await ctx.send("Не думайте, что я нахожусь в голосовом канале")
+        await ctx.send("")
 
 @bot.command()
 async def faceit(ctx , nick: str):
