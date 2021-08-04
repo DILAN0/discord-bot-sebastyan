@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="843317d2-00f3-42fb-803d-89a1a83f7d23" name="Default Changelist" comment="code">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="843317d2-00f3-42fb-803d-89a1a83f7d23" name="Default Changelist" comment="gitignor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +16,18 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/DILAN0/sebastyan-discord-bot" />
+      </set>
+    </option>
+    <option name="recentSearchFilters">
+      <list>
+        <option value="state:open" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1qi2iYEVgPTx0Uah7b0EbwcVw16" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -111,7 +122,28 @@
       <option name="project" value="LOCAL" />
       <updated>1628075178234</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="gitignor">
+      <created>1628075307668</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628075307668</updated>
+    </task>
+    <task id="LOCAL-00009" summary="gitignor">
+      <created>1628075415600</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628075415600</updated>
+    </task>
+    <task id="LOCAL-00010" summary="gitignor">
+      <created>1628075450999</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628075450999</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -120,6 +152,7 @@
     </ignored-roots>
     <MESSAGE value="discord-bot" />
     <MESSAGE value="code" />
-    <option name="LAST_COMMIT_MESSAGE" value="code" />
+    <MESSAGE value="gitignor" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignor" />
   </component>
 </project>
