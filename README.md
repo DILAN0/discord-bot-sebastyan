@@ -54,7 +54,6 @@ pip install requests
 ```
 Code modification(for the first launch)
 ```python
-# функция для создания бд
 def data():
 
     cursor.execute("""CREATE TABLE "users" (
@@ -67,9 +66,9 @@ def data():
                 "lvl"	INT
             )""")
     conn.commit()
-#data()
-#^
-#|
-#|
-#Убрать комментарий в случаи отсутствия БД
+#---data()---
+#     ^
+#     |
+#     |
+#Remove comment if there is no database
 ```
