@@ -46,24 +46,24 @@ async def on_command_error(ctx, error):
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
     DiscordComponents(bot)
-    for guild in bot.guilds:#т.к. бот для одного сервера, то и цикл выводит один сервер
-        print(guild.id)#вывод id сервера
-        serv=guild#без понятия зачем это
-        for member in guild.members:#цикл, обрабатывающий список участников
-            cursor.execute(f"SELECT id FROM users where id={member.id}")#проверка, существует ли участник в БД
+    for guild in bot.guilds:
+        print(guild.id)
+        serv=guild
+        for member in guild.members:
+            cursor.execute(f"SELECT id FROM users where id={member.id}")
             if cursor.fetchone()==None:#Если не существует
-                cursor.execute(f"INSERT INTO users VALUES ({member.id}, '{member.name}', '<@{member.id}>','S','S','S',0)")#вводит все данные об участнике в БД
-            else:#если существует
+                cursor.execute(f"INSERT INTO users VALUES ({member.id}, '{member.name}', '<@{member.id}>','S','S','S',0)")
+            else:
                 pass
             conn.commit()
 @bot.event
 async def on_member_join(member):
-    cursor.execute(f"SELECT id FROM users where id={member.id}")#все также, существует ли участник в БД
-    if cursor.fetchone()==None:#Если не существует
-        cursor.execute(f"INSERT INTO users VALUES ({member.id}, '{member.name}', '<@{member.id}>','S','S','S',0)")#вводит все данные об участнике в БД
-    else:#Если существует
+    cursor.execute(f"SELECT id FROM users where id={member.id}")
+    if cursor.fetchone()==None:
+        cursor.execute(f"INSERT INTO users VALUES ({member.id}, '{member.name}', '<@{member.id}>','S','S','S',0)")
+    else:
         pass
-    conn.commit()#применение изменений в БД
+    conn.commit()
 
 @bot.command()
 async def add(ctx ,service,teg):
