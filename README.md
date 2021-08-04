@@ -1,4 +1,4 @@
-# discord-bot-sebastyan
+# sebastyan
 
 
 
