@@ -11,6 +11,7 @@ from asyncio import sleep
 import json
 import sqlite3
 from discord_components import Button,DiscordComponents,ButtonStyle
+import ffmpeg
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='.' , intents = intents)
