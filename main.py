@@ -51,7 +51,7 @@ async def on_ready():
         serv=guild
         for member in guild.members:
             cursor.execute(f"SELECT id FROM users where id={member.id}")
-            if cursor.fetchone()==None:
+            if cursor.fetchone() is None:
                 cursor.execute(f"INSERT INTO users VALUES ({member.id}, '{member.name}', '<@{member.id}>','S','S','S',0)")
             else:
                 pass
