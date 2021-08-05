@@ -253,36 +253,8 @@ async def faceit(ctx , nick: str):
 
     embed = discord.Embed(color=col, title='Stats' , description = f"ELO: {elo}\nK/D: {kd}\nHS: {hs}%\nWin Rate: {winrate}%")
 
-    if lvl == 1:
-       file = discord.File("lvl/level_1.png", filename="level_1.png")
-       embed.set_author(name=name, icon_url='attachment://level_1.png')
-    if lvl == 2:
-        file = discord.File("lvl/level_2.png", filename="level_2.png")
-        embed.set_author(name=name, icon_url='attachment://level_2.png')
-    if lvl == 3:
-        file = discord.File("lvl/level_3.png", filename="level_3.png")
-        embed.set_author(name=name, icon_url='attachment://level_3.png')
-    if lvl == 4:
-        file = discord.File("lvl/level_4.png", filename="level_4.png")
-        embed.set_author(name=name, icon_url='attachment://level_4.png')
-    if lvl == 5:
-        file = discord.File("lvl/level_5.png", filename="level_5.png")
-        embed.set_author(name=name, icon_url='attachment://level_5.png')
-    if lvl == 6:
-        file = discord.File("lvl/level_6.png", filename="level_6.png")
-        embed.set_author(name=name, icon_url='attachment://level_6.png')
-    if lvl == 7:
-        file = discord.File("lvl/level_7.png", filename="level_7.png")
-        embed.set_author(name=name, icon_url='attachment://level_7.png')
-    if lvl == 8:
-        file = discord.File("lvl/level_8.png", filename="level_8.png")
-        embed.set_author(name=name, icon_url='attachment://level_8.png')
-    if lvl == 9:
-        file = discord.File("lvl/level_9.png", filename="level_9.png")
-        embed.set_author(name=name, icon_url='attachment://level_9.png')
-    if lvl == 10:
-        file = discord.File("lvl/level_max.png", filename="level_max.png")
-        embed.set_author(name=name, icon_url='attachment://level_max.png')
+    file = discord.File(f"lvl/level_{lvl}.png", filename=f"level_{lvl}.png")
+    embed.set_author(name=name, icon_url=f'attachment://level_{lvl}.png')
 
     if avatar == '':
         embed.set_thumbnail(url='https://assets.faceit-cdn.net/hubs/avatar/1b588a32-e207-4596-80b9-a2ff9eabf28d_1607167905245.jpg')
