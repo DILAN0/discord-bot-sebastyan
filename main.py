@@ -56,6 +56,7 @@ async def on_ready():
             else:
                 pass
             conn.commit()
+
 @bot.event
 async def on_member_join(member):
     cursor.execute(f"SELECT id FROM users where id={member.id}")
@@ -375,20 +376,6 @@ async def info(ctx,member:discord.Member = None, guild: discord.Guild = None):
         emb.add_field(name="Статус:", value=member.activity,inline=False)
         emb.add_field(name="Роль на сервере:", value=f"{member.top_role.mention}",inline=False)
         emb.add_field(name="Акаунт был создан:", value=member.created_at.strftime("%a, %#d %B %Y, %I:%M %p UTC"),inline=False)
-
-
-@bot.command()
-async def playlist(ctx):
-    with open("music.json") as f:
-        data_a = json.load(f)
-        result = data_a
-        result1 = YoutubeSearch(data_a[0], max_results=1).to_dict()
-        result2 = YoutubeSearch(data_a[1], max_results=1).to_dict()
-        res1 = result1[0]['url_suffix']
-        res = result2[0]['url_suffix']
-        title = result[0]['title']
-        icon = result[0]['thumbnails'][0]
-        url1 = "https://www.youtube.com" + res1
 
 @bot.command()
 async def resume(ctx):
