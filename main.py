@@ -8,18 +8,17 @@ import youtube_dl
 from youtube_search import YoutubeSearch
 from TOKEN import *
 from asyncio import sleep
-import json
 import sqlite3
 from discord_components import Button,DiscordComponents,ButtonStyle
-import ffmpeg
+
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='.' , intents = intents)
 conn = sqlite3.connect("Discord.sql")
 cursor = conn.cursor()
+
 print(f"SQlite v {sqlite3.sqlite_version}")
 
-# функция для боздания бд
 def data():
 
     cursor.execute("""CREATE TABLE "users" (
@@ -32,11 +31,11 @@ def data():
                 "lvl"	INT
             )""")
     conn.commit()
-#data()
-#^
-#|
-#|
-#Убрать комментарий в случаи отсутствия БД
+#---data()---
+#     ^
+#     |
+#     |
+#Remove comment if there is no database
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -52,7 +51,7 @@ async def on_ready():
         serv=guild
         for member in guild.members:
             cursor.execute(f"SELECT id FROM users where id={member.id}")
-            if cursor.fetchone()==None:
+            if cursor.fetchone() is None:
                 cursor.execute(f"INSERT INTO users VALUES ({member.id}, '{member.name}', '<@{member.id}>','S','S','S',0)")
             else:
                 pass
@@ -130,8 +129,7 @@ async def oldplay(ctx , *,zapr ):
         await ctx.send('⛔ Дождитесь окончания текущего воспроизведения трека или воспользуйтесь командой ".stop"⛔')
         return
     await ctx.send("🎶 Готовлю все, скоро начну воспроизведение музыки 🎶")
-    print("Кто-то хочет играть музыку, позвольте мне приготовить для них это ...")
-
+    
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -201,7 +199,7 @@ async def leave(ctx):
         await voice.disconnect()
         await ctx.send(f"Линул из {channel}")
     else:
-        await ctx.send("Не думайте, что я нахожусь в голосовом канале")
+        await ctx.send("")
 
 @bot.command()
 async def faceit(ctx , nick: str):
@@ -255,36 +253,8 @@ async def faceit(ctx , nick: str):
 
     embed = discord.Embed(color=col, title='Stats' , description = f"ELO: {elo}\nK/D: {kd}\nHS: {hs}%\nWin Rate: {winrate}%")
 
-    if lvl == 1:
-       file = discord.File("lvl/level_1.png", filename="level_1.png")
-       embed.set_author(name=name, icon_url='attachment://level_1.png')
-    if lvl == 2:
-        file = discord.File("lvl/level_2.png", filename="level_2.png")
-        embed.set_author(name=name, icon_url='attachment://level_2.png')
-    if lvl == 3:
-        file = discord.File("lvl/level_3.png", filename="level_3.png")
-        embed.set_author(name=name, icon_url='attachment://level_3.png')
-    if lvl == 4:
-        file = discord.File("lvl/level_4.png", filename="level_4.png")
-        embed.set_author(name=name, icon_url='attachment://level_4.png')
-    if lvl == 5:
-        file = discord.File("lvl/level_5.png", filename="level_5.png")
-        embed.set_author(name=name, icon_url='attachment://level_5.png')
-    if lvl == 6:
-        file = discord.File("lvl/level_6.png", filename="level_6.png")
-        embed.set_author(name=name, icon_url='attachment://level_6.png')
-    if lvl == 7:
-        file = discord.File("lvl/level_7.png", filename="level_7.png")
-        embed.set_author(name=name, icon_url='attachment://level_7.png')
-    if lvl == 8:
-        file = discord.File("lvl/level_8.png", filename="level_8.png")
-        embed.set_author(name=name, icon_url='attachment://level_8.png')
-    if lvl == 9:
-        file = discord.File("lvl/level_9.png", filename="level_9.png")
-        embed.set_author(name=name, icon_url='attachment://level_9.png')
-    if lvl == 10:
-        file = discord.File("lvl/level_max.png", filename="level_max.png")
-        embed.set_author(name=name, icon_url='attachment://level_max.png')
+    file = discord.File(f"lvl/level_{lvl}.png", filename=f"level_{lvl}.png")
+    embed.set_author(name=name, icon_url=f'attachment://level_{lvl}.png')
 
     if avatar == '':
         embed.set_thumbnail(url='https://assets.faceit-cdn.net/hubs/avatar/1b588a32-e207-4596-80b9-a2ff9eabf28d_1607167905245.jpg')
