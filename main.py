@@ -242,7 +242,7 @@ async def faceit(ctx , nick: str):
 
     headers = {
         'accept': 'application/json',
-        'Authorization': 'Bearer d062b0f9-0b54-4df0-95c9-6e4df9dc0e54',
+        'Authorization': f'Bearer {faceit_api}',
     }
 
     response = requests.get('https://open.faceit.com/data/v4/players/'+player_id+'/stats/csgo',
